@@ -1,0 +1,35 @@
+{
+  "name": "portfolio",
+  "version": "1.0.0",
+  "description": "Personal portfolio",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/SrCyco/portfolio.git"
+  },
+  "keywords": [
+    "html",
+    "css",
+    "javascript",
+    "sass"
+  ],
+  "author": "Sergio Niño",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/SrCyco/portfolio/issues"
+  },
+  "homepage": "https://github.com/SrCyco/portfolio#readme",
+  "dependencies": {},
+  "devDependencies": {
+    "browser-sync": "^2.26.3",
+    "gulp": "^4.0.0",
+    "gulp-imagemin": "^5.0.3",
+    "gulp-sass": "^4.0.2",
+    "gulp-sourcemaps": "^2.6.4",
+    "gulp-uglify": "^3.0.1",
+    "pump": "^3.0.0"
+  }
+}
