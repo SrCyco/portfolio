@@ -1,0 +1,41 @@
+
+
+@import url('https://fonts.googleapis.com/css?family=Oswald:300,400,600|PT+Sans+Narrow:400,700');
+
+/*----------- Base Colors ----------- */
+$color-white: #ffffff;
+$color-black: #000000;
+
+/*----------- Custom Colors -----------*/
+$color-titles: #107F6A;
+$color-btns: #1ACCAB;
+
+$color-darker: #003840;
+$color-medium-darker: #005A5B;
+$color-medium: #007369;
+$color-medium-lighter: #008C72;
+$color-lighter: #02A676;
+
+/*----------- Fonts -----------*/
+$font-principal: 'Oswald', sans-serif;
+$font-secondary: 'PT Sans Narrow', sans-serif;
+
+$font-base: 16;
+$font-light: 300;
+$font-normal: 400;
+$font-semibold: 600;
+$font-bold: 700;
+
+
+/*----------- Screen sizes -----------*/
+
+$screen-mobile-s: 320px;
+$screen-mobile-m: 480px;
+$screen-mobile-l: 767px;
+$screen-tablet-port: 768px;
+$screen-tablet-land: 1024px;
+$screen-desktop-s: 1200px;
+$screen-desktop-m: 1366px;
+$screen-desktop-l: 1680px;
+
+$grid-width: 70%;

@@ -1,0 +1,27 @@
+@mixin font($font-family: 'principal', $size: $font-base, $font-weight: $font-normal, $line-height: $size+3, $color: $color-darker){
+    @if $font-family == 'principal'{
+        font-family: $font-principal;
+    } @else {
+        font-family: $font-secondary;
+    }
+    font-size: calc-em($size);
+    font-weight: $font-weight;
+    line-height: calc-em($line-height);
+    color: $color;
+}
+
+
+@mixin only-desktop($size-device){
+
+}
+@mixin only-tablet($size-device){
+
+}
+@mixin only-mobile($size-device){
+    @if $size-device == $screen-mobile-l{
+        @media screen and (max-width: $screen-mobile-l){
+            @content;
+        }
+    }
+}
+

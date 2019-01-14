@@ -4,9 +4,9 @@ var gulp = require('gulp');
 var sass = require('gulp-sass');
 var browserSync = require('browser-sync').create();
 var uglify = require('gulp-uglify');
-var pump = require('pump');
 var imagemin = require('gulp-imagemin');
 var sourcemaps = require('gulp-sourcemaps');
+var htmlmin = require('gulp-htmlmin');
 
  
 sass.compiler = require('node-sass');
@@ -29,6 +29,11 @@ gulp.task('sass', function () {
     .pipe(sourcemaps.write('./maps'))
     .pipe(gulp.dest('../app/js'))
   });
+  gulp.task('html', function(){
+    return gulp.src('*.html')
+    .pipe(htmlmin({ collapseWhitespace: true }))
+    .pipe(gulp.dest('../app'))
+  });
 
   gulp.task('images', function(){
     return gulp.src('images/*')
@@ -42,6 +47,6 @@ gulp.task('sass', function () {
     });
     gulp.watch('scss/**/*.scss', gulp.series('sass'));
     gulp.watch('js/*.js', gulp.series('scripts')).on('change', browserSync.reload);
-    gulp.watch("../app/*.html").on('change', browserSync.reload);
+    gulp.watch("*.html", gulp.series('html')).on('change', browserSync.reload);
 
 });
