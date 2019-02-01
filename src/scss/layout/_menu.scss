@@ -2,83 +2,114 @@
 
 .nav-menu{
     background-color: $color-darker;
-    display: flex;
-    justify-content: center;
+    min-height: $menu-height;
+    height: $menu-height;
     .grid{
         display: flex;
         justify-content: space-between;
+        height: inherit;
     }
     &__list{
         display: flex;
-        width: 60%;
         justify-content: space-between;
+        height: inherit;
     }
     &__item{
+        height: inherit;
         a{
+            display: flex;
+            height: inherit;
+            align-items: center;
             @include font('principal', 18, $font-normal, 18,  $color-lighter);
+            padding: 0 calc-em(20);
+            position: relative;
+            will-change: color;
+            transition: color .3s ease-in;
+
+            &:after{
+                content: '';
+                position: absolute;
+                bottom: 0;
+                right: 0;
+                height: 3px;
+                width: 0;
+                will-change: width;
+                transition: width .3s cubic-bezier(0.22, 0.61, 0.36, 1);
+                background-color: $color-lighter;
+            }
+            &:hover{
+                color: $color-white;
+                &{
+                    &:after{
+                        left: 0;
+                        right: 0;
+                        width: 100%;
+                    }
+                }
+            }
         }
     }
 }
 
-%line{
-    width: 5px;
-    background-color: $color-lighter;
-    position: absolute;
-    height: 100%;
-}
-.logo{
-    width: 100px;
-    height: 100px;
-    position: relative;
-    .circle{
-        width: 100%;
-        height: 100%;
-        border: 5px solid $color-lighter;
-        border-radius: 50%;
-        overflow: hidden;
-        position:relative;
+// %line{
+//     width: 5px;
+//     background-color: $color-lighter;
+//     position: absolute;
+//     height: 100%;
+// }
+// .logo{
+//     width: 100px;
+//     height: 100px;
+//     position: relative;
+//     .circle{
+//         width: 100%;
+//         height: 100%;
+//         border: 5px solid $color-lighter;
+//         border-radius: 50%;
+//         overflow: hidden;
+//         position:relative;
         
-        .line{
-            &--left{
-                @extend %line;
-                left: 25%;
-            }
-            &--diagonal{
-                @extend %line;
-                left: calc(50% - 2.5px);
-                transform: rotateZ(-29deg);
-            }
-            &--right{
-                @extend %line;
-                right: 25%;
-            }
-            &--horizontal{
-                position: absolute;
-                background-color: $color-lighter;
-                height: 5px;
-                width: 100%;
-                left: 0;
-                top: 50%;
-            }
-        }
-    }
-            .top{
-                position: absolute;
-                right: 0;
-                top: 0;
-                width: 25.4%;
-                height: 50%;
-                background-color: white;
-                z-index: 2;
-            }
-            .bottom{
-                position: absolute;
-                left: 0;
-                bottom: 0;
-                width: 25.5%;
-                height: 49%;
-                background-color: white;
-                z-index: 2;
-            }
-}
+//         .line{
+//             &--left{
+//                 @extend %line;
+//                 left: 25%;
+//             }
+//             &--diagonal{
+//                 @extend %line;
+//                 left: calc(50% - 2.5px);
+//                 transform: rotateZ(-29deg);
+//             }
+//             &--right{
+//                 @extend %line;
+//                 right: 25%;
+//             }
+//             &--horizontal{
+//                 position: absolute;
+//                 background-color: $color-lighter;
+//                 height: 5px;
+//                 width: 100%;
+//                 left: 0;
+//                 top: 50%;
+//             }
+//         }
+//     }
+//             .top{
+//                 position: absolute;
+//                 right: 0;
+//                 top: 0;
+//                 width: 25.4%;
+//                 height: 50%;
+//                 background-color: white;
+//                 z-index: 2;
+//             }
+//             .bottom{
+//                 position: absolute;
+//                 left: 0;
+//                 bottom: 0;
+//                 width: 25.5%;
+//                 height: 49%;
+//                 background-color: white;
+//                 z-index: 2;
+//             }
+// }
 

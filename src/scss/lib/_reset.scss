@@ -11,6 +11,9 @@ h1, h2, h3, h4, h5, h6{
 figure{
     margin: 0;
 }
+img{
+    vertical-align: top;
+}
 ul{
     list-style: none;
     padding: 0;
@@ -19,6 +22,13 @@ ul{
 a{
     text-decoration: none;
 }
-.grid{
-    width: $grid-width;
+.center-grid{
+    display: flex;
+    justify-content: center;
+    .grid{
+        width: $grid-width;
+    }
+    .grid--small{
+        width: $grid-small;
+    }
 }
