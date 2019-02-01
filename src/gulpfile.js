@@ -22,11 +22,18 @@ gulp.task('sass', function () {
     .pipe(browserSync.stream());
   });
 
+  // gulp.task('scripts', function(){
+  //   return gulp.src('js/*.js')
+  //   .pipe(sourcemaps.init())
+  //   .pipe(uglify())
+  //   .pipe(sourcemaps.write('./maps'))
+  //   .pipe(gulp.dest('../app/js'))
+  // });
   gulp.task('scripts', function(){
     return gulp.src('js/*.js')
-    .pipe(sourcemaps.init())
-    .pipe(uglify())
-    .pipe(sourcemaps.write('./maps'))
+    // .pipe(sourcemaps.init())
+    // .pipe(uglify())
+    // .pipe(sourcemaps.write('./maps'))
     .pipe(gulp.dest('../app/js'))
   });
   gulp.task('html', function(){
