@@ -23,54 +23,39 @@
             -ms-user-select: none;
             user-select: none;
             cursor: pointer;
+            @include font('principal', 62, $font-semibold, 62, $color-white);
+            border: 10px solid $color-black;
+            text-shadow: 0 0 20px $color-black;
         }
         &__face--front{
             @extend %cube__face;
-            background-color: rgba($color: $color-js, $alpha: .8);
+            background-color: rgba($color: $color-js, $alpha: .95);
             transform: rotateY(0) translateZ(200px);
         }
         &__face--back{
             @extend %cube__face;
-            background-color: rgba($color: $color-css, $alpha: .8);
+            background-color: rgba($color: $color-css, $alpha: .95);
             transform: rotateY(180deg) translateZ(200px);
         }
         &__face--right{
             @extend %cube__face;
-            background-color: rgba($color: $color-html, $alpha: .8);
+            background-color: rgba($color: $color-html, $alpha: .95);
             transform: rotateY(90deg) translateZ(200px);
         }
         &__face--left{
             @extend %cube__face;
-            background-color: rgba($color: $color-sass, $alpha: .8);
+            background-color: rgba($color: $color-sass, $alpha: .95);
             transform: rotateY(-90deg) translateZ(200px);
         }
         &__face--top{
             @extend %cube__face;
-            background-color: rgba($color: $color-git, $alpha: .8);
+            background-color: rgba($color: $color-git, $alpha: .95);
             transform: rotateX(90deg) translateZ(200px);
         }
         &__face--bottom{
             @extend %cube__face;
-            background-color: rgba($color: $color-jquery, $alpha: .8);
+            background-color: rgba($color: $color-jquery, $alpha: .95);
             transform: rotateX(-90deg) translateZ(200px);
         }
-        // &.show-front{
-        //     transform: translateZ(-200px) rotateY(0);
-        // }
-        // &.show-back{
-        //     transform: translateZ(-200px) rotateY(180deg);
-        // }
-        // &.show-right{
-        //     transform: translateZ(-200px) rotateY(-90deg);
-        // }
-        // &.show-left{
-        //     transform: translateZ(-200px) rotateY(90deg);
-        // }
-        // &.show-top{
-        //     transform: translateZ(-200px) rotateX(-90deg);
-        // }
-        // &.show-bottom{
-        //     transform: translateZ(-200px) rotateX(90deg);
-        // }
     }
 }

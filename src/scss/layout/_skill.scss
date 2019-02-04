@@ -1,11 +1,16 @@
 .skill{
     width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     &__title{
+        @include font('principal', 22, $font-semibold, 22, $color-titles);
 
     }
     &__container{
-        width: 400px;
-        height: 400px;
+        width: 200px;
+        height: 200px;
         position: relative;
     }
     &__chart{

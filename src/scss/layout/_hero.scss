@@ -32,10 +32,8 @@
 .presentation{
     text-align: center;
     &__title{
-        @include font('principal', 42, $font-semibold, 24, $color-titles);
-        background: -webkit-linear-gradient($color-titles, $color-white);
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
+        @include font('principal', 42, $font-semibold, 24, $color-lighter);
+       
     }
     &__text{
         @include font('principal', 22, $font-normal, 25, $color-texts);
