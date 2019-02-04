@@ -1,0 +1,41 @@
+.skill{
+    width: 50%;
+    &__title{
+
+    }
+    &__container{
+        width: 400px;
+        height: 400px;
+        position: relative;
+    }
+    &__chart{
+        width: 200px;
+        height: 200px;
+    }
+
+    %cirlce{
+        fill: none;
+        stroke-width: 20;
+    }
+    &__circle-bg{
+        @extend %cirlce;
+        stroke: #f0f0f0;
+        
+    }
+    &__circle{
+        @extend %cirlce;
+        stroke: #e34f26;
+        stroke-dasharray: 565.2;
+        stroke-dashoffset: 169;
+        transform: rotateZ(-90deg);
+        transform-origin: center;
+        stroke-linecap: round;
+        animation: fill-circle 1s ease-out;
+    }
+}
+
+@keyframes fill-circle{
+    from{
+        stroke-dashoffset: 565.2;
+    }
+}
