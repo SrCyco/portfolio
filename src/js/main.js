@@ -132,7 +132,7 @@ function templateSkill(skill) {
             <svg class="skill__chart" >
                 <circle class="skill__circle-bg" cx="50%" cy="50%" r="90" />
                 <circle class="skill__circle" cx="50%" cy="50%" r="90" />
-                <text x="50%" y="50%" class="percentage">${skill.percentage}%</text>
+                <text x="50%" y="50%" class="skill__percent" aligment-baseline="middle" text-anchor="middle" dominant-baseline="middle">${skill.percentage}%</text>
             </svg>
         </figure>
         <p class="skill__desc">${skill.desc}</p>

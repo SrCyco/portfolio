@@ -5,7 +5,8 @@
     justify-content: center;
     align-items: center;
     &__title{
-        @include font('principal', 22, $font-semibold, 22, $color-titles);
+        @include font('principal', 32, $font-semibold, 32, $color-lighter);
+        margin-bottom: 1em;
 
     }
     &__container{
@@ -25,17 +26,24 @@
     &__circle-bg{
         @extend %cirlce;
         stroke: #f0f0f0;
-        
     }
     &__circle{
         @extend %cirlce;
-        stroke: #e34f26;
-        stroke-dasharray: 565.2;
-        stroke-dashoffset: 169;
         transform: rotateZ(-90deg);
         transform-origin: center;
         stroke-linecap: round;
         animation: fill-circle 1s ease-out;
+    }
+    &__percent{
+        text-anchor: middle;
+        alignment-baseline: middle;
+        fill: $color-texts;
+        @include font('principal', 32, $font-semibold, 32, $color-texts);
+    }
+    &__desc{
+        @include font('principal', 18, $font-semibold, 18, $color-texts);
+        text-align: center;
+        margin: calc-em(22, 18) 0;
     }
 }
 
